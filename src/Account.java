@@ -7,24 +7,35 @@ public class Account {
 
     // constructors
 
-    public Account(String id, String firstName, String lastName) {
+/*     public Account(String id, String firstName, String lastName) {
         this.id = "";
         this.firstName = "";
         this.lastName = "";
     }
+ */
 
-
-    public Account(String id, String firsName, String lastName, int balance) {
+    public Account(String id, String firstName, String lastName, int balance) {
         this.id = id;
-        this.firstName = firsName;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.balance = balance;
     }
     // behavior
+    public String getID() {
+        return id;
+    }
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-    // get and set 
-
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 
     //toString Method
 
