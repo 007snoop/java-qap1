@@ -1,5 +1,6 @@
 public class Account {
     // attributes
+    private static int idCounter = 0;
     private int id;
     private String firstName;
     private String lastName;
@@ -8,18 +9,18 @@ public class Account {
     // constructors
 
     public Account() {
-        this.id = 0;
         this.firstName = "no name";
         this.lastName = "no name";
     }
-
-
-    public Account(int id, String firstName, String lastName, int balance) {
-       
+    
+    
+    public Account( String firstName, String lastName, int balance) {
+        
+        this.id = ++idCounter;
         this.firstName = firstName;
         this.lastName = lastName;
         this.balance = balance;
-        this.id = ++id;
+        
     }
     // behavior
 
