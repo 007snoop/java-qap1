@@ -9,13 +9,13 @@ public class Account {
     // constructors
 
     public Account() {
+        this.id = ++idCounter;
         this.firstName = "no name";
         this.lastName = "no name";
     }
     
     
     public Account( String firstName, String lastName, int balance) {
-        
         this.id = ++idCounter;
         this.firstName = firstName;
         this.lastName = lastName;
