@@ -4,7 +4,7 @@ public class Account {
     private int id;
     private String firstName;
     private String lastName;
-    private int balance = 0;
+    private double balance = 0;
     private double lastAddedCredit;
 
     // constructors
@@ -16,7 +16,7 @@ public class Account {
     }
     
     
-    public Account( String firstName, String lastName, int balance ) {
+    public Account( String firstName, String lastName, double balance ) {
         this.id = ++idCounter;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,7 +36,7 @@ public class Account {
     public String getFullName() {
         return firstName + " " + lastName;
     }
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
@@ -48,7 +48,17 @@ public class Account {
     public double getLastAdd() {
         return lastAddedCredit; // displays last saved value
     }
- 
+    // transfer method
+    public boolean transferFunds(Account recipient, double amount) {
+        // checks if the sender has more then transfer ammount
+        if (this.balance >= amount && amount > 0) {
+            this.balance -= amount; // takes from sender
+            recipient.addCredit(amount); // adds to recipient
+            return true;
+        } else {
+            return false;
+        }
+    }
     //toString Method
     @Override
     public String toString()
