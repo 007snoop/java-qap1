@@ -5,6 +5,7 @@ public class Account {
     private String firstName;
     private String lastName;
     private int balance = 0;
+    private double lastAddedCredit;
 
     // constructors
 
@@ -15,7 +16,7 @@ public class Account {
     }
     
     
-    public Account( String firstName, String lastName, int balance) {
+    public Account( String firstName, String lastName, int balance ) {
         this.id = ++idCounter;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -24,11 +25,13 @@ public class Account {
     }
     // behavior
 
+
     public int getID() {
         return id;
     }
-    public int setID() {
-        return ++this.id ;
+
+    public void setID(int id) {
+        this.id = id;
     }
     public String getFullName() {
         return firstName + " " + lastName;
@@ -37,10 +40,15 @@ public class Account {
         return balance;
     }
 
-    public int addCredit(int amount) {
-        this.balance += amount;
-        return balance; 
+    public void addCredit(double amount) {
+        this.balance += amount; // updates balance
+        this.lastAddedCredit = amount; // saves added value
     }
+
+    public double getLastAdd() {
+        return lastAddedCredit; // displays last saved value
+    }
+ 
     //toString Method
     @Override
     public String toString()

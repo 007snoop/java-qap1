@@ -10,6 +10,7 @@ public class TestAccount {
         // get method for fullname
         Acc1.addCredit(2000);
         System.out.println(Acc1);;
-        System.out.println(A1);        
+        System.out.println(A1);  
+        System.out.println(Acc1.getLastAdd());      
     }
 }
