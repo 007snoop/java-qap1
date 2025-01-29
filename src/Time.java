@@ -37,16 +37,26 @@ public class Time {
     }
 
     // advance time I/O by 1 broken into h/m/s
-    public void counterHour() {
+    public void counterUpHour() {
         ++this.hour;
     }
-    public void counterMinute() {
+    public void counterUpMinute() {
         ++this.minute;
     }
-    public void counterSecond() {
+    public void counterUpSecond() {
         ++this.second;
     }
-
+    // reverse time I/O by 1 broken into h/m/s
+    public void counterDownHour() {
+        --this.hour;
+    }
+    public void counterDownMinute() {
+        --this.minute;
+    
+    }
+    public void counterDownSecond() {
+        --this.second;
+    }
 
     @override
     public String toString() {
