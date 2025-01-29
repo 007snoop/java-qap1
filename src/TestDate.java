@@ -6,5 +6,9 @@ public class TestDate {
         System.out.println(date);
 
         int day = date.getDay();
+        int month = date.getMonth();
+        int year = date.getYear();
+
+        System.out.println(" day: " + day + " month: " + month + " year: " + year);
     }
 }
