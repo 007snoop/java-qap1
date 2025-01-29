@@ -23,6 +23,7 @@ public class Time {
     public int getSecond() {
         return second;
     }
+    
 
     // setters
     public void setHour(int hour) {
@@ -34,6 +35,18 @@ public class Time {
     public void setSecond(int second) {
         this.second = second;
     }
+
+    // advance time I/O by 1 broken into h/m/s
+    public void counterHour() {
+        ++this.hour;
+    }
+    public void counterMinute() {
+        ++this.minute;
+    }
+    public void counterSecond() {
+        ++this.second;
+    }
+
 
     @override
     public String toString() {
